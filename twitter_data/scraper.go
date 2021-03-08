@@ -9,12 +9,12 @@ import (
 
 func main() {
     scraper := twitterscraper.New()
-    fmt.Println("test")
-    fmt.Println(os.Args)
+    //fmt.Println("test")
+    //fmt.Println(os.Args)
     //last_ID := ""
     //for tweet := range scraper.GetTweets(context.Background(), "AcquisitionCorp", 1000) {
     for _, arg := range os.Args[1:] {
-        fmt.Println(arg)
+        //fmt.Println(arg)
         for tweet := range scraper.GetTweets(context.Background(), arg, 1000) {
             if tweet.Error != nil {
                 panic(tweet.Error)
